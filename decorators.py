@@ -18,7 +18,7 @@ def check_role(code):
         def f(*args, **kwargs):
             if not current_user.can(code):
                 abort(403)
-            return f(*args, **kwargs)
+            return func(*args, **kwargs)
 
         return f
 
